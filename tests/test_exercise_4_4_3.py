@@ -22,7 +22,7 @@ def test_flip_vertical():
         "flip_vertical() modifying original pattern"
 
 
-def test_flip_horizontal():
+def test_flip_horizontal():  # noqa 1045
     from life import Pattern
 
     test_pattern = np.array([
@@ -36,7 +36,8 @@ def test_flip_horizontal():
         [1, 1, 1, 0, 0, 0, 1, 0]
     ])
     test_flipped = Pattern(test_pattern)
-    assert np.array_equal(test_flipped.flip_horizontal().grid, hflip_pattern),\
+    assert np.array_equal(test_flipped.flip_horizontal().grid,
+                          hflip_pattern), \
         "flip_horizontal() transformation incorrect"
     assert np.array_equal(test_flipped.grid, test_pattern), \
         "flip_horizontal() modifying original pattern"
